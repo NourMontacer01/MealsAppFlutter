@@ -18,6 +18,7 @@ MealsApp is a **multi-screen Flutter application** that allows users to **browse
 ![Meals](screenshots/Category.png)
 ![Meal Details](screenshots/Details.png)
 ![Side Drawer](screenshots/SideDrawer.png)
+```
 
 ## 🛠 Tech Stack  
 - **Flutter** (latest version)  
