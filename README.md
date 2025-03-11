@@ -1,4 +1,3 @@
-# 🍽️ MealsApp - A Flutter Meals Browser  
 
 MealsApp is a **multi-screen Flutter application** that allows users to **browse meals by category, apply filters**, and view detailed recipes with **ingredients, preparation steps, and tips**. It features **smooth animations** and uses **Riverpod** for state management. Users can also **favorite meals** for quick access.  
 
@@ -10,15 +9,12 @@ MealsApp is a **multi-screen Flutter application** that allows users to **browse
 ✅ Smooth Flutter animations  
 ✅ State management with Riverpod  
 
+## 📸 Screenshots  
 
-```md
-## 📸 Screenshots
-
-![Home Screen](screenshots/Home.png)
-![Meals](screenshots/Category.png)
-![Meal Details](screenshots/Details.png)
-![Side Drawer](screenshots/SideDrawer.png)
-```
+![Home Screen](screenshots/Home.png)  
+![Meals](screenshots/Category.png)  
+![Meal Details](screenshots/Details.png)  
+![Side Drawer](screenshots/SideDrawer.png)  
 
 ## 🛠 Tech Stack  
 - **Flutter** (latest version)  
@@ -27,7 +23,7 @@ MealsApp is a **multi-screen Flutter application** that allows users to **browse
 - **Material Design**  
 - **Animations** (`AnimatedBuilder`, `Hero`, `SlideTransition`, etc.)  
 
-## 🔧 Installation  
+## 🔧 Installation   
 1️⃣ Clone the repository  
 ```sh
 git clone https://github.com/yourusername/MealsAppFlutter.git
