@@ -67,10 +67,15 @@ class MealScreen extends ConsumerWidget {
               //The build method should run again with the new isFavorite value, then the pop happens.
               // But maybe the pop is too quick, so the animation doesn't have time to complete before the screen is gone.
 
-              Future.delayed(
-                const Duration(milliseconds: 500),
-                () => Navigator.of(context).pop(),
-              );
+              // Only pop if this screen is still the one on top: the user may
+              // already have gone back during the delay, and popping then
+              // would close the wrong screen.
+              final route = ModalRoute.of(context);
+              Future.delayed(const Duration(milliseconds: 500), () {
+                if (context.mounted && (route?.isCurrent ?? false)) {
+                  Navigator.of(context).pop();
+                }
+              });
             },
           ),
         ],
