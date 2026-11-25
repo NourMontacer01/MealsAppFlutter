@@ -55,7 +55,11 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
     if (_selesctedpageindex == 1) {
       final favoriteMeals = ref.watch(favoriteMealProvider);
-      activepage = MealsScreen(meals: favoriteMeals);
+      activepage = MealsScreen(
+        meals: favoriteMeals,
+        emptyTitle: 'No favorites yet',
+        emptyHint: 'Tap the star on a meal to save it here',
+      );
       activePageTitle = 'Your favorites';
     }
 
