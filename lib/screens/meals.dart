@@ -19,10 +19,18 @@ import 'package:mealsapp/screens/meal.dart';
 import 'package:mealsapp/widgets/meal_item.dart';
 
 class MealsScreen extends StatelessWidget {
-  MealsScreen({super.key, this.title, required this.meals });
+  const MealsScreen({
+    super.key,
+    this.title,
+    required this.meals,
+    this.emptyTitle = 'No meals found, please check your filters',
+    this.emptyHint = 'Try selecting another category',
+  });
 
   final String? title;
   final List<Meal> meals;
+  final String emptyTitle;
+  final String emptyHint;
 
   void _onSelectedmeal(BuildContext context, Meal meal) {
     Navigator.of(context).push(
@@ -50,18 +58,20 @@ class MealsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'No meals found, please check your filters',
+              emptyTitle,
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               height: 200,
               child: Text(
-                'Try selecting another category',
+                emptyHint,
+                textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onBackground,
+                  color: Theme.of(context).colorScheme.onSurface,
                 ),
               ),
             ),
@@ -69,9 +79,9 @@ class MealsScreen extends StatelessWidget {
         ),
       );
     }
-    if (title != null)
+    if (title != null) {
       return Scaffold(appBar: AppBar(title: Text(title!)), body: content);
-    else
-      return content;
+    }
+    return content;
   }
 }

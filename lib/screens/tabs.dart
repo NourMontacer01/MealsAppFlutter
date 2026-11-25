@@ -15,14 +15,9 @@ import 'package:mealsapp/screens/filters.dart';
 import 'package:mealsapp/providers/favorite_provider.dart';
 import 'package:mealsapp/providers/filter_provider.dart'; // Import du modèle Filter
 
-const kInitialFilters = {
-  Filter.glutenFree: false,
-  Filter.lactoseFree: false,
-  Filter.vegetarian: false,
-  Filter.vegan: false,
-};
-
 class TabsScreen extends ConsumerStatefulWidget {
+  const TabsScreen({super.key});
+
   @override
   ConsumerState<TabsScreen> createState() {
     return _TabsScreenState();
@@ -55,7 +50,11 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
     if (_selesctedpageindex == 1) {
       final favoriteMeals = ref.watch(favoriteMealProvider);
-      activepage = MealsScreen(meals: favoriteMeals);
+      activepage = MealsScreen(
+        meals: favoriteMeals,
+        emptyTitle: 'No favorites yet',
+        emptyHint: 'Tap the star on a meal to save it here',
+      );
       activePageTitle = 'Your favorites';
     }
 

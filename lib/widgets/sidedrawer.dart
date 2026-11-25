@@ -16,7 +16,7 @@ class Sidedrawer extends StatelessWidget {
                   Theme.of(context).colorScheme.primaryContainer,
                   Theme.of(
                     context,
-                  ).colorScheme.primaryContainer.withOpacity(0.8),
+                  ).colorScheme.primaryContainer.withValues(alpha: 0.8),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -44,7 +44,7 @@ class Sidedrawer extends StatelessWidget {
             title: Text(
               'Meals',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
                 fontSize: 16,
               ),
             ),
@@ -57,7 +57,7 @@ class Sidedrawer extends StatelessWidget {
             title: Text(
               'Filters',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
                 fontSize: 16,
               ),
             ),
@@ -69,7 +69,7 @@ class Sidedrawer extends StatelessWidget {
             title: Text(
               'Settings',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
                 fontSize: 16,
               ),
             ),
