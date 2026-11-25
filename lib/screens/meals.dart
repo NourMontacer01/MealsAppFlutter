@@ -61,7 +61,7 @@ class MealsScreen extends StatelessWidget {
               emptyTitle,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
             SizedBox(height: 20),
@@ -71,7 +71,7 @@ class MealsScreen extends StatelessWidget {
                 emptyHint,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onBackground,
+                  color: Theme.of(context).colorScheme.onSurface,
                 ),
               ),
             ),

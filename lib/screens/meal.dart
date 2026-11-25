@@ -19,7 +19,7 @@ import 'package:transparent_image/transparent_image.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MealScreen extends ConsumerWidget {
-  MealScreen({super.key, required this.meal});
+  const MealScreen({super.key, required this.meal});
 
   final Meal meal;
 

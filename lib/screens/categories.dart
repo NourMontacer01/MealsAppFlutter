@@ -21,7 +21,7 @@ import 'package:mealsapp/screens/meals.dart';
 import 'package:mealsapp/models/meal.dart';
 
 class CategoriesScreen extends StatefulWidget {
-  CategoriesScreen({super.key, required this.availableMeals});
+  const CategoriesScreen({super.key, required this.availableMeals});
 
   final List<Meal> availableMeals;
 

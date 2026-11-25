@@ -15,14 +15,9 @@ import 'package:mealsapp/screens/filters.dart';
 import 'package:mealsapp/providers/favorite_provider.dart';
 import 'package:mealsapp/providers/filter_provider.dart'; // Import du modèle Filter
 
-const kInitialFilters = {
-  Filter.glutenFree: false,
-  Filter.lactoseFree: false,
-  Filter.vegetarian: false,
-  Filter.vegan: false,
-};
-
 class TabsScreen extends ConsumerStatefulWidget {
+  const TabsScreen({super.key});
+
   @override
   ConsumerState<TabsScreen> createState() {
     return _TabsScreenState();
